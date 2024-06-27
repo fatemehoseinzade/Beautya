@@ -1,0 +1,70 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.main {
+  width: 100%;
+  height: 60vh;
+  background-image: url("/images/land_snasor.png");
+  background-color: black;
+  background-size: cover;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.navbar {
+  /* From https://css.glass */
+  background: rgba(212, 71, 130, 0.13);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  border: 1px solid rgba(202, 129, 160, 0.3);
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
+
+.search_bar {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  background-color: rgba(156, 201, 98, 0.7);
+  border: 1px solid #ebebeb1a;
+  border-radius: 15px;
+}
+
+/* .card_list {
+  position: absolute;
+  top:-10%;
+  left: 0;
+
+} */
+
+.footer {
+  background: rgba(212, 71, 130, 0.13);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
+  /* border: 1px solid rgba(202, 129, 160, 0.3); */
+  color: white;
+}
