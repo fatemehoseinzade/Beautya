@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 import { useSelector } from "react-redux";
 import { IRootState } from "@/redux/store";
 
-const page = async () => {
+const FavoritePage = async () => {
   const favorites = useSelector((state : IRootState) => state.favorite.favoriteList)
 
   return (
@@ -67,4 +67,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default FavoritePage;
