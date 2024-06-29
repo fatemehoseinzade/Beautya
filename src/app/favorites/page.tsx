@@ -1,12 +1,13 @@
+'use client'
 import React from "react";
-import { getFavorites } from "@/lib/data";
-import { TProduct } from "@/types/Product-Type";
 import Image from "next/image";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
+import { useSelector } from "react-redux";
+import { IRootState } from "@/redux/store";
 
 const page = async () => {
-  const favorites: TProduct[] = await getFavorites();
+  const favorites = useSelector((state : IRootState) => state.favorite.favoriteList)
 
   return (
     <div className="container py-5">

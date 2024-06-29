@@ -15,7 +15,7 @@ const Detail = () => {
             className="w-full h-96 object-contain"
           />
         </div>
-        <div className="w-5/12" style={{backgroundColor:"#EDEDEF"}}>
+        <div className="w-5/12 me-4" style={{backgroundColor:"#EDEDEF"}}>
           <Image
             alt=""
             src="/images/Rectangle 119.png"
