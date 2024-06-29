@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 import { useSelector } from "react-redux";
 import { IRootState } from "@/redux/store";
 
-const FavoritePage = async () => {
+const FavoritePage = () => {
   const favorites = useSelector((state : IRootState) => state.favorite.favoriteList)
 
   return (
