@@ -1,11 +1,20 @@
+import { getProductBySlug } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
-const Detail = () => {
+const Detail =  async ({
+  params,
+}: {
+  params: { slug:string };
+}) => {
+  
+  const product =await getProductBySlug(params.slug)
+
+
   return (
     <>
-      <div className="w-full flex flex-row my-4">
-        <div className="w-1/12">
+      <div className="w-full flex flex-row m-4">
+        {/* <div className="w-1/12">
           <Image
             alt=""
             src="/images/gallery.png"
@@ -14,11 +23,11 @@ const Detail = () => {
             sizes="100vw"
             className="w-full h-96 object-contain"
           />
-        </div>
-        <div className="w-5/12 me-4" style={{backgroundColor:"#EDEDEF"}}>
+        </div> */}
+        <div className="w-5/12 me-4" style={{backgroundColor:"#F2F2F4"}}>
           <Image
-            alt=""
-            src="/images/Rectangle 119.png"
+            alt={product?.name || ""}
+            src={product?.image || "/images/Rectangle 119.png"}
             width={"0"}
             height={"0"}
             sizes="100vw"
@@ -27,13 +36,13 @@ const Detail = () => {
         </div>
         <div className="w-6/12">
           <h1 className="font-bold text-3xl text-pink-900 pt-4">
-            beautya prestige lA micro-huile de rose advanced serum
+            {product?.name}
           </h1>
           <p className="text-md font-bold mt-2">Anti-aging face serum</p>
           <p className="text-sm">
-            Formulated with 92% natural-origin ingredients
+            {product?.description}
           </p>
-          <p className="text-md mt-2 font-bold">$250.0</p>
+          <p className="text-md mt-2 font-bold">${product?.price}</p>
           <Image
             alt=""
             src="/images/product_detail.png"

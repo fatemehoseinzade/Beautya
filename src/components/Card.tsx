@@ -4,9 +4,8 @@ import Image from "next/image";
 import { addCommas } from "@/utils/addCommas";
 import { TProduct } from "@/types/Product-Type";
 import { useRouter } from "next/navigation";
-import { manageFavoriteList } from "@/lib/data";
 import { useDispatch, useSelector } from "react-redux";
-import { IFavorite, add, remove } from "@/redux/reducers/FavoriteSlice";
+import { add, remove } from "@/redux/reducers/FavoriteSlice";
 import { IRootState } from "@/redux/store";
 
 interface Props {
