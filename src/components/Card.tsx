@@ -55,7 +55,7 @@ const Card = (props: Props) => {
         className="p-3 cursor-pointer"
         onClick={() => router.push(`/detail/${slug}`)}
       >
-        <h1 className="font-bold text-pink-900">{name}</h1>
+        <h1 className="font-bold text-pink-900">{name?.slice(0,30)}</h1>
         <p className="text-sm  my-2">{description?.slice(0, 40)}...</p>
         <p className="text-sm font-semibold">${addCommas(parseInt(price))}</p>
       </div>

@@ -18,7 +18,7 @@ const FavoritePage = () => {
         </span>
       </h1>
       <div className="flex flex-row py-4s h-full">
-        <div className="hidden lg:w-1/5 relative left-0">
+        <div className="hidden lg:block w-1/5 relative left-0">
           <Image
             alt=""
             src="/images/banner.png"
@@ -45,12 +45,12 @@ const FavoritePage = () => {
             <Button label="Browse Product" link="/store" />
           </div>
         ) : (
-          <div className="w-4/5 grid grid-cols-4 gap-4">
+          <div className="w-full lg:w-4/5 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {favorites?.map((item) => (
               <Card product={item} key={item._id} />
             ))}
 
-             {/*<div className="col-span-2">
+             {/* <div className=" hidden lg:block col-span-2">
               <Image
                 alt=""
                 src="/images/banner_2.png"

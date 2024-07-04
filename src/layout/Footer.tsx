@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="w-full py-5 px-10 bg-pink-800 flex justify-between mb-5 ">
-      <Link href="/#">
+      <Link href="/#" className="hidden lg:block">
         <Image
           alt="logo"
           src="/images/logo__1_-removebg-preview_2.png"
