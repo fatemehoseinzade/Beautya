@@ -7,7 +7,7 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className="w-full flex flex-row m-4">
+      <div className="lg:flex lg:flex-row m-4">
         {/* <div className="w-1/12">
           <Image
             alt=""
@@ -18,7 +18,7 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
             className="w-full h-96 object-contain"
           />
         </div> */}
-        <div className="w-5/12 me-4" style={{ backgroundColor: "#F2F2F4" }}>
+        <div className="w-full lg:w-5/12 me-4" style={{ backgroundColor: "#F2F2F4" }}>
           <Image
             alt={product?.name || ""}
             src={product?.image || "/images/Rectangle 119.png"}
@@ -28,7 +28,7 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
             className="w-full h-96 object-contain"
           />
         </div>
-        <div className="w-6/12 flex flex-col justify-between items-end">
+        <div className="w-full lg:w-6/12 flex flex-col justify-between items-end">
           <div>
             <h1 className="font-bold text-3xl text-pink-900 pt-4">
               {product?.name}
@@ -37,14 +37,14 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
             <p className="text-sm">{product?.description}</p>
             <p className="text-md mt-2 font-bold">${product?.price}</p>
           </div>
-          <div className="w-2/3 bg-pink-50 rounded p-4">
+          <div className="w-full lg:w-2/3 bg-pink-50 rounded p-4">
             <div className="flex my-2">
               <Image
                 alt=""
                 src="/images/Vector.png"
                 width={"18"}
                 height={"14"}
-                className="me-2"
+                className="me-2 hidden lg:block"
               />
               <p className="text-sm ">
                 receive 2 free samples when you spend $100
@@ -56,7 +56,8 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
                 src="/images/Vector-2.png"
                 width={"18"}
                 height={"14"}
-                className="me-2"
+                className="me-2 hidden lg:block"
+                
               />
               <p className="text-sm ">
                 receive free 1-2-1 expert advice in branches
@@ -68,7 +69,7 @@ const Detail = async ({ params }: { params: { slug: string } }) => {
                 src="/images/Vector-1.png"
                 width={"18"}
                 height={"10"}
-                className="me-2"
+                className="me-2 hidden lg:block"
               />
               <p className="text-sm ">
                 receive $2 when you return 5 empty containers
