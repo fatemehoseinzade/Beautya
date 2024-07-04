@@ -8,8 +8,8 @@ interface Props{
 
 const Navbar = ({classes}:Props) => {
   return (
-    <div className={`flex items-center justify-between px-10 py-2 rounded-lg ${classes || 'navbar'}`}>
-      <Link href="/">
+    <div className={`flex items-center justify-between lg:px-10 py-2 rounded-lg ${classes || 'navbar'}`}>
+      <Link href="/" className="hidden md:block">
         <Image alt="logo" src="/images/logo__1_-removebg-preview_2.png" width={'150'} height={'50'}/>
       </Link>
       <div className="flex">

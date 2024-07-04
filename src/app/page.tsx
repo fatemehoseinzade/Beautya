@@ -16,7 +16,7 @@ export default async function Home() {
         <Navbar />
       </div>
       {/*  Categories */}
-      <div className="p-10 px-40 ">
+      <div className="p-10 lg:px-40 ">
         <h1 className="text-xl font-bold pb-5 text-center">
           Product Categories
         </h1>
@@ -27,7 +27,7 @@ export default async function Home() {
         </GridWrapper>
       </div>
       {/*  Baner */}
-      <div className="w-full h-64 bg-pink-900 grid grid-cols-2">
+      <div className="w-full lg:h-64 bg-pink-900 grid grid-cols-1 lg:grid-cols-2 ">
         <div className="flex flex-col text-white p-20">
           <h1 className="font-bold text-xl pb-4">
             NEW Virtual Skincare Analysis
@@ -47,9 +47,9 @@ export default async function Home() {
           className="w-full h-64 object-cover"
         />
       </div>
-      <div className="p-10 px-40">
+      <div className="p-10 lg:px-40">
         <h1 className="text-xl font-bold pb-5 text-center">Best Sellers</h1>
-        <GridWrapper classes="w-full mx-auto">
+        <GridWrapper classes="w-full">
           {bestSellers?.map(item => (
             <Card product={item} key={item._id}/>
           ))}

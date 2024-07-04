@@ -18,7 +18,7 @@ const FavoritePage = () => {
         </span>
       </h1>
       <div className="flex flex-row py-4s h-full">
-        <div className="w-1/5 relative left-0">
+        <div className="hidden lg:w-1/5 relative left-0">
           <Image
             alt=""
             src="/images/banner.png"
@@ -37,7 +37,7 @@ const FavoritePage = () => {
           />
         </div>
         {favorites?.length === 0 ? (
-          <div className="flex flex-col w-4/5 h-full bg-pink-300 text-center items-center py-2">
+          <div className="flex flex-col w-full lg:w-4/5 h-full bg-pink-300 text-center items-center py-2">
             <h2 className="text-xl font-bold my-2">
               There is no item in
               <span className="text-2xl text-pink-900">{` Favorite List`}</span>
